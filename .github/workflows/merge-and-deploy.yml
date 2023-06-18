@@ -1,4 +1,4 @@
-name: Merge and Deploy
+name: Merge dev into envtest
 
 on:
   push:
@@ -6,11 +6,19 @@ on:
       - dev
 
 jobs:
-  merge-and-deploy:
+  merge:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Merge dev into envtest
-        run: |
-          git checkout envtest
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Merge dev into envtest
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "dev.andres.g@protonmail.com"
+        git fetch origin envtest
+        git checkout envtest
+        git merge origin/dev --no-commit
+        git commit -m "Merge dev into envtest"
+        git push origin envtest
