@@ -18,5 +18,4 @@ jobs:
 
       - name: Merge dev into envtest
         run: |
-          git branch -M envtest
-          git push origin dev:envtest 
+          git checkout envtest
