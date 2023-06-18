@@ -11,11 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "devandresg"
-          git config --global user.email "dev.andres.g@protonmail.com"
-
       - name: Merge dev into envtest
         run: |
           git checkout envtest
