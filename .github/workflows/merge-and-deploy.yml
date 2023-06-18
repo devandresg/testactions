@@ -20,7 +20,4 @@ jobs:
         git status
         git branch -M envtest
         git status
-        git merge dev
-        git status
-        git commit -m "Merge dev into envtest"
         git push origin envtest
