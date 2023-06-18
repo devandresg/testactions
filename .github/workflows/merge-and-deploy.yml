@@ -11,13 +11,16 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     
     - name: Merge dev into envtest
       run: |
         ls -la
         git branch -r
+        git status
         git branch -M envtest
+        git status
         git merge dev
+        git status
         git commit -m "Merge dev into envtest"
         git push origin envtest
