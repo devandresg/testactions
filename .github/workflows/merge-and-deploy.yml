@@ -15,6 +15,7 @@ jobs:
     
     - name: Merge dev into envtest
       run: |
+        ls -la
         git config user.name "GitHub Actions"
         git config user.email "dev.andres.g@protonmail.com"
         git checkout -b envtest
