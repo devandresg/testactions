@@ -17,7 +17,7 @@ jobs:
       run: |
         ls -la
         git branch -r
-        git checkout -M envtest
+        git branch -M envtest
         git merge dev
         git commit -m "Merge dev into envtest"
         git push origin envtest
