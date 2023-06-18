@@ -17,7 +17,7 @@ jobs:
       run: |
         git config user.name "GitHub Actions"
         git config user.email "dev.andres.g@protonmail.com"
-        git checkout envtest
+        git checkout -b envtest
         git merge origin/dev
         git commit -m "Merge dev into envtest"
         git push origin envtest
