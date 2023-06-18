@@ -1,0 +1,17 @@
+name: Merge and Deploy
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  merge-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Merge dev into envtest
+        run: |
+          git checkout envtest
+          git merge dev
