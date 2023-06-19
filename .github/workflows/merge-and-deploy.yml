@@ -18,6 +18,8 @@ jobs:
         ls -la
         git branch -r
         git status
-        git branch -M envtest
+        git branch envtest
+        git fetch origin envtest
         git status
+        git merge dev --allow-unrelated-histories
         git push origin envtest
