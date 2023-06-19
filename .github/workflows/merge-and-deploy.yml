@@ -18,7 +18,6 @@ jobs:
         ls -la
         git branch -r
         git status
-        git branch envtest
         git fetch origin envtest
         git pull origin envtest
         git status
