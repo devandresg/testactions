@@ -20,6 +20,7 @@ jobs:
         git status
         git branch envtest
         git fetch origin envtest
+        git pull origin envtest
         git status
         git merge dev --allow-unrelated-histories
         git push origin envtest
